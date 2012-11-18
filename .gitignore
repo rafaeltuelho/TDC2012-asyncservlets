@@ -12,3 +12,4 @@ asyncwebapp/nbproject/private/private.properties
 asyncwebapp/nbproject/private/private.xml
 
 *.MF
+/asyncwebapp/build/

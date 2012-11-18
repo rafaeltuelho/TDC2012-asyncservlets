@@ -21,12 +21,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rafaeltuelho
  */
-@WebServlet(name = "DeliciousClientServlet",
-urlPatterns = {"/DeliciousClientServlet"},
+@WebServlet(name = "DeliciousClientAsyncServlet",
+urlPatterns = {"/DeliciousClientAsyncServlet"},
 asyncSupported = true)
-public class DeliciousClientServlet extends HttpServlet {
+public class DeliciousClientAsyncServlet extends HttpServlet {
 
-    private static final Logger LOG = Logger.getLogger(DeliciousClientServlet.class.getName());
+    private static final Logger LOG = Logger.getLogger(DeliciousClientAsyncServlet.class.getName());
 
     /**
      * Processes requests for both HTTP
@@ -53,7 +53,6 @@ public class DeliciousClientServlet extends HttpServlet {
         
         response.getWriter().println("<link href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" />");
 
-        
         response.getWriter().println("</head>");
         response.getWriter().println("<body>");
         response.getWriter().println("<h1>Http Servlet Thread: [<span class=\"text-info\">" + this.getThreadID() + "</span>]");
